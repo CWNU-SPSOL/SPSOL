@@ -534,7 +534,7 @@ img {
   display:         flex;
   justify-content: space-between;
   align-items:     center;
-  padding:         var(--space-lg) 0;
+  padding:         var(--space-xs) 0;
 }
 
 .footer__left {

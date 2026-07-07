@@ -80,6 +80,7 @@ img {
 .nav__links a {
   display:        block;
   padding:        0 18px;
+  font-family:    var(--font-heading);   /* Orbitron */ 
   height:         var(--nav-height);
   line-height:    var(--nav-height);
   font-size:      var(--text-base);

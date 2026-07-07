@@ -547,6 +547,14 @@ img {
   color:     var(--color-text-faint);
 }
 
+.footer__right img {
+  display:    block;
+  height:     16px;
+  width:      auto;
+  object-fit: contain;
+  opacity:    0.9;
+}
+
 /* =====================================================
    RESPONSIVE
    ===================================================== */

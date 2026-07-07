@@ -4,7 +4,8 @@
    여기서 색상/폰트/간격을 바꾸면 전체 사이트에 반영됨
    ===================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+/* 폰트 통합 로드 (Inter + Playfair Display + Orbitron) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Orbitron:wght@700&display=swap');
 
 /* ── 컬러 팔레트 ─────────────────────────────────────
    바꾸고 싶으면 이 값들만 수정하세요
@@ -41,8 +42,9 @@
   ─────────────────────────────────────────────────── */
 
   /* 타이포그래피 */
-  --font-serif:   'Playfair Display', Georgia, serif;  /* 제목용 */
-  --font-sans:    'Inter', system-ui, sans-serif;      /* 본문용 */
+   --font-heading: 'Orbitron', 'Inter', sans-serif;   /* 새로 추가 */
+   --font-serif:   'Playfair Display', Georgia, serif;         /* 제목용 */
+   --font-sans:    'Inter', system-ui, sans-serif;               /* 본문용 */ 
 
   /* 폰트 크기 스케일 */
   --text-xs:   11px;

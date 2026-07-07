@@ -1,0 +1,75 @@
+/* =====================================================
+   theme.css
+   컬러 팔레트 & 디자인 토큰 정의
+   여기서 색상/폰트/간격을 바꾸면 전체 사이트에 반영됨
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+/* ── 컬러 팔레트 ─────────────────────────────────────
+   바꾸고 싶으면 이 값들만 수정하세요
+   ─────────────────────────────────────────────────── */
+:root {
+
+  /* 배경 계열 */
+  --color-bg-base:        #0a0a0a;   /* 메인 배경 (가장 어두움) */
+  --color-bg-surface:     #111111;   /* 섹션 배경 */
+  --color-bg-card:        #181818;   /* 카드 배경 */
+  --color-bg-card-hover:  #252525;   /* 카드 호버 */
+  --color-bg-elevated:    #1e1e1e;   /* 떠있는 요소 배경 */
+
+  /* 테두리 계열 */
+  --color-border:         #2c2c2c;   /* 기본 구분선 */
+  --color-border-light:   #383838;   /* 밝은 구분선 */
+
+  /* 텍스트 계열 */
+  --color-text-primary:   #f0f0f0;   /* 제목, 강조 텍스트 */
+  --color-text-secondary: #bbbbbb;   /* 본문 텍스트 */
+  --color-text-muted:     #888888;   /* 보조 텍스트 */
+  --color-text-faint:     #555555;   /* 가장 흐린 텍스트 */
+
+  /* 포인트 컬러 (골드/웜 베이지 계열) */
+  --color-accent:         #c8b99a;   /* 메인 포인트 컬러 */
+  --color-accent-dim:     #8a7a65;   /* 흐린 포인트 컬러 */
+  --color-accent-subtle:  rgba(200, 185, 154, 0.10); /* 배경용 포인트 */
+
+  /* ── 원한다면 다른 테마로 교체 ─────────────────────
+     블루 계열로 바꾸려면 아래 세 줄로 교체:
+     --color-accent:       #7eb3d4;
+     --color-accent-dim:   #4e7a99;
+     --color-accent-subtle: rgba(126, 179, 212, 0.10);
+  ─────────────────────────────────────────────────── */
+
+  /* 타이포그래피 */
+  --font-serif:   'Playfair Display', Georgia, serif;  /* 제목용 */
+  --font-sans:    'Inter', system-ui, sans-serif;      /* 본문용 */
+
+  /* 폰트 크기 스케일 */
+  --text-xs:   11px;
+  --text-sm:   13px;
+  --text-base: 15px;
+  --text-md:   17px;
+  --text-lg:   22px;
+  --text-xl:   28px;
+  --text-2xl:  36px;
+  --text-3xl:  46px;
+
+  /* 간격 (spacing) */
+  --space-xs:   8px;
+  --space-sm:   16px;
+  --space-md:   24px;
+  --space-lg:   32px;
+  --space-xl:   48px;
+  --space-2xl:  72px;
+  --space-3xl:  100px;
+
+  /* 레이아웃 */
+  --max-width:      900px;    /* 페이지 최대 너비 */
+  --page-padding-x: 32px;    /* 좌우 여백 */
+  --nav-height:     58px;    /* 내비게이션 바 높이 */
+
+  /* 전환 효과 */
+  --transition-fast:   0.15s ease;
+  --transition-base:   0.22s ease;
+  --transition-slow:   0.35s ease;
+}

@@ -30,8 +30,8 @@ html {
 body::before {
   content:    '';
   position:   fixed;           /* 스크롤해도 항상 화면 전체 덮음 */
-  /* inset: 0 0 0 0;                      /* top/right/bottom/left 모두 0 */ */
-  transform: translateY(-50px);
+  inset: 0 0 0 0;                      /* top/right/bottom/left 모두 0 */
+  /* transform: translateY(-50px); */
   z-index:    -1;              /* 콘텐츠 뒤에 위치 */
  
   background-color:      #0a0a0a;              /* 사진 로딩 전 폴백 */

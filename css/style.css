@@ -33,6 +33,7 @@ body::before {
   nset: 100px 0 0 20px;                      /* top/right/bottom/left 모두 0 */
   z-index:    -1;              /* 콘텐츠 뒤에 위치 */
  
+  background-color:      #0a0a0a;              /* 사진 로딩 전 폴백 */
   background-image:      url('../images/research/poster.png');
   background-size:       cover;
   background-position:   center center;

@@ -51,7 +51,7 @@ body::after {
   position:   fixed;
   inset:      0;
   z-index:    -1;
-  background: rgba(0, 0, 0, 0.45);   /* ← 숫자 높일수록 더 어두움 */
+  background: rgba(0, 0, 0, 0.75);   /* ← 숫자 높일수록 더 어두움 */
 }
 
 a {

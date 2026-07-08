@@ -30,10 +30,10 @@ html {
 body::before {
   content:    '';
   position:   fixed;           /* 스크롤해도 항상 화면 전체 덮음 */
-  inset:      0;               /* top/right/bottom/left 모두 0 */
+  nset: 100px 0 0 20px;                      /* top/right/bottom/left 모두 0 */
   z-index:    -1;              /* 콘텐츠 뒤에 위치 */
  
-  background-image:      url('/images/research/poster.png');
+  background-image:      url('../images/research/poster.png');
   background-size:       cover;
   background-position:   center center;
   background-attachment: fixed;

@@ -27,6 +27,7 @@
   --color-text-primary:   #f0f0f0;   /* 제목, 강조 텍스트 */
   --color-text-secondary: #bbbbbb;   /* 본문 텍스트 */
   --color-text-muted:     #888888;   /* 보조 텍스트 */
+  --color-text-dim:       #6e6e6e;   /* 중간 텍스트 */
   --color-text-faint:     #555555;   /* 가장 흐린 텍스트 */
 
   /* 포인트 컬러 (골드/웜 베이지 계열) */

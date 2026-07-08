@@ -14,10 +14,10 @@
 
   /* 배경 계열 */
   /* --color-bg-base:        #0a0a0a;   /* 메인 배경 (가장 어두움) */ 
-  --color-bg-surface:     #111111;   /* 섹션 배경 */
-  --color-bg-card:        #181818;   /* 카드 배경 */
-  --color-bg-card-hover:  #252525;   /* 카드 호버 */
-  --color-bg-elevated:    #1e1e1e;   /* 떠있는 요소 배경 */ */
+  /* --color-bg-surface:     #111111;   /* 섹션 배경 */ */
+  /* --color-bg-card:        #181818;   /* 카드 배경 */ */
+  /* --color-bg-card-hover:  #252525;   /* 카드 호버 */ */
+  /* --color-bg-elevated:    #1e1e1e;   /* 떠있는 요소 배경 */ */ */
   --color-bg-base:       transparent;             /* 사진 비치도록 */
   --color-bg-card:       rgba(18, 18, 18, 0.82);  /* 카드 반투명 */
   --color-bg-card-hover: rgba(30, 30, 30, 0.88);

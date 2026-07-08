@@ -169,7 +169,7 @@ img {
 
 .hero__affil {
   font-size:     var(--text-sm);
-  color:         var(--color-text-faint);
+  color:         var(--color-text-dim);
   margin-bottom: var(--space-lg);
 }
 

@@ -834,3 +834,22 @@ img {
   color:      var(--color-accent);
 }
 
+/* =====================================================
+   Project 공통
+   ===================================================== */
+.project-list {
+  border:   1px solid var(--color-border);
+  padding:  var(--space-lg);
+  position: relative;
+}
+
+.project-card__body {
+  font-size:     var(--text-base);
+  color:         var(--color-text-secondary);
+  line-height:   1.85;
+  margin-bottom: var(--space-sm);
+}
+
+.project-card strong {
+  color: var(--color-text-primary);
+}

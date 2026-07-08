@@ -30,7 +30,7 @@ html {
 body::before {
   content:    '';
   position:   fixed;           /* 스크롤해도 항상 화면 전체 덮음 */
-  inset: 100px 0 0 20px;                      /* top/right/bottom/left 모두 0 */
+  inset: 0 0 500px 20px;                      /* top/right/bottom/left 모두 0 */
   /* transform: translateX(20px); */
   z-index:    -1;              /* 콘텐츠 뒤에 위치 */
  

@@ -645,3 +645,78 @@ img {
 .page-header__desc a {
   color: var(--color-accent);
 }
+
+/* =====================================================
+   PEOPLE — PI 섹션 (사진 왼쪽, 설명 오른쪽)
+   ===================================================== */
+.people-pi {
+  display:               grid;
+  grid-template-columns: 133px 1fr;   /* 사진 고정 너비 | 설명 나머지 */
+  gap:                   var(--space-xl);
+  align-items:           start;
+}
+ 
+.pi-photo {
+  flex-shrink: 0;
+}
+ 
+.pi-photo img {
+  display:    block;
+  border:     1px solid var(--color-border);
+}
+ 
+.pi-name {
+  font-family:   var(--font-serif);
+  font-size:     var(--text-xl);
+  font-weight:   700;
+  color:         var(--color-text-primary);
+  margin-bottom: 6px;
+  line-height:   1.2;
+}
+ 
+.pi-name-ko {
+  font-family: var(--font-sans);
+  font-size:   var(--text-lg);
+  font-weight: 400;
+  color:       var(--color-text-muted);
+  margin-left: 8px;
+}
+ 
+.pi-title {
+  font-size:      var(--text-sm);
+  font-weight:    600;
+  color:          var(--color-accent-dim);
+  letter-spacing: 0.04em;
+  margin-bottom:  4px;
+}
+ 
+.pi-affil {
+  font-size:     var(--text-sm);
+  color:         var(--color-text-faint);
+  margin-bottom: var(--space-md);
+}
+ 
+.pi-bio {
+  font-size:     var(--text-sm);
+  color:         var(--color-text-secondary);
+  line-height:   1.85;
+  margin-bottom: var(--space-md);
+}
+ 
+.pi-links {
+  display:     flex;
+  gap:         8px;
+  flex-wrap:   wrap;
+}
+ 
+/* 반응형 — 모바일에서 세로 배치 */
+@media (max-width: 600px) {
+  .people-pi {
+    grid-template-columns: 1fr;
+  }
+ 
+  .pi-photo img {
+    width:  110px !important;
+    height: 140px !important;
+  }
+}

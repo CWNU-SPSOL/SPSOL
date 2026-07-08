@@ -24,24 +24,6 @@ html {
   -webkit-font-smoothing: antialiased;
 } */
 
-body {
-  color:                  var(--color-text-primary);
-  font-family:            var(--font-sans);
-  font-size:              var(--text-base);
-  line-height:            1.75;
-  -webkit-font-smoothing: antialiased;
- 
-  /* ── 전체 배경 사진 ─────────────────────────────
-     images/ 폴더에 bg.jpg 를 넣어주세요
-     파일명이 다르면 아래 경로만 수정하면 됩니다   */
-  background-color:      #0a0a0a;              /* 사진 로딩 전 폴백 */
-  background-image:      url('images/bg.jpg');
-  background-size:       cover;
-  background-position:   center center;
-  background-attachment: fixed;                /* 스크롤해도 배경 고정 */
-  background-repeat:     no-repeat;
-}
- 
 /* ── 배경 블러 + 어두운 오버레이 ────────────────────
    body::before 로 배경 위에 효과를 덧씌움
    ─────────────────────────────────────────────────── */
@@ -51,10 +33,11 @@ body::before {
   inset:      0;               /* top/right/bottom/left 모두 0 */
   z-index:    -1;              /* 콘텐츠 뒤에 위치 */
  
-  background-image:      url('/images/research/poster.png');
+  background-color:      #0a0a0a;              /* 사진 로딩 전 폴백 */
+  background-image:      url('images/bg.jpg');
   background-size:       cover;
   background-position:   center center;
-  background-attachment: fixed;
+  background-attachment: fixed;                /* 스크롤해도 배경 고정 */
   background-repeat:     no-repeat;
  
   filter:     blur(3px) brightness(0.45);   /* 블러 강도 / 밝기 조절 */

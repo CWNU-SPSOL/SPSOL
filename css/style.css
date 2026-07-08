@@ -850,6 +850,6 @@ img {
   margin-bottom: var(--space-sm);
 }
 
-.project-card strong {
+.project-card__body strong {
   color: var(--color-text-primary);
 }

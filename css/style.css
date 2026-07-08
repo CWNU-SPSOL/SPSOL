@@ -30,14 +30,13 @@ html {
 body::before {
   content:    '';
   position:   fixed;           /* 스크롤해도 항상 화면 전체 덮음 */
-  inset: 100px 0 0 20px;                      /* top/right/bottom/left 모두 0 */
+  inset:      0;               /* top/right/bottom/left 모두 0 */
   z-index:    -1;              /* 콘텐츠 뒤에 위치 */
  
-  background-color:      #0a0a0a;              /* 사진 로딩 전 폴백 */
-  background-image:      url('../images/research/poster.png');
+  background-image:      url('/images/research/poster.png');
   background-size:       cover;
   background-position:   center center;
-  background-attachment: fixed;                /* 스크롤해도 배경 고정 */
+  background-attachment: fixed;
   background-repeat:     no-repeat;
  
   filter:     blur(3px) brightness(0.45);   /* 블러 강도 / 밝기 조절 */
@@ -70,12 +69,21 @@ img {
 ::-webkit-scrollbar-thumb  { background: var(--color-border); }
 
 /* ── 레이아웃 래퍼 ───────────────────────────────── */
-.page {
+/* .page {
   max-width: var(--max-width);
   margin:    0 auto;
   padding:   0 var(--page-padding-x);
-}
+} */
 
+.page {
+  max-width:        var(--max-width);
+  margin:           0 auto;
+  padding:          0 var(--page-padding-x);
+ 
+  /* 콘텐츠 영역 전체에 반투명 오버레이 */
+  background:       rgba(0, 0, 0, 0.55);   /* ← 숫자 높일수록 더 어두움 */
+  backdrop-filter:  blur(2px);              /* ← 콘텐츠 뒤 살짝 블러 */
+}
 /* =====================================================
    NAV
    ===================================================== */
@@ -235,8 +243,8 @@ img {
 }
 
 .profile-photo {
-  width:           180px;
-  height:          220px;
+  width:           160px;
+  height:          200px;
   background:      var(--color-bg-card);
   border:          1px solid var(--color-border);
   display:         flex;
@@ -383,6 +391,8 @@ img {
 /* =====================================================
    NEWS
    ===================================================== */
+
+/* 배경 사진 — 블러 처리 */
 .news-list {
   display:        flex;
   flex-direction: column;
@@ -821,3 +831,4 @@ img {
   background: var(--color-accent-subtle);
   color:      var(--color-accent);
 }
+

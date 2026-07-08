@@ -13,7 +13,6 @@
 :root {
 
   /* 배경 계열 */
-  /* --color-bg-base:        #000065;   /* 메인 배경 (가장 어두움) */ */
   --color-bg-base:        #0a0a0a;   /* 메인 배경 (가장 어두움) */ 
   --color-bg-surface:     #111111;   /* 섹션 배경 */
   --color-bg-card:        #181818;   /* 카드 배경 */

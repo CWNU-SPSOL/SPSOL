@@ -35,7 +35,7 @@ body::before {
   z-index:    -1;              /* 콘텐츠 뒤에 위치 */
  
   background-color:      #0a0a0a;              /* 사진 로딩 전 폴백 */
-  background-image:      url('../images/background/HET.jpg');
+  background-image:      url('/SPSOL/images/background/HET.jpg');
   background-size:       cover;
   background-position:   center center;
   background-attachment: fixed;
@@ -161,7 +161,7 @@ img {
   content:    '';
   position:   absolute;                        /* absolute (원래크기), fixed (화면전체크기) */
   inset: 0 0 0px 20px;                      /* top/right/bottom/left 모두 0 */
-  background: url('../images/research/MET.png') left center / cover no-repeat;
+  background: url('/SPSOL/images/research/MET.png') left center / cover no-repeat;
   filter:     blur(1px) brightness(1); /* 블러 강도: 숫자 높일수록 더 흐림 */
   transform:  scale(0.95);              /* 블러 시 가장자리 흰 테두리 방지 */
   z-index:    0;

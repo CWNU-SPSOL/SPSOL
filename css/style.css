@@ -1073,3 +1073,267 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+/* =====================================================
+   GALLERY PAGE
+   ===================================================== */
+ 
+/* ── 필터 탭 ─────────────────────────────────────────── */
+.gallery-filter {
+  display:    flex;
+  gap:        1px;
+  background: var(--color-border);
+  margin:     var(--space-lg) 0;
+}
+ 
+.gallery-filter__btn {
+  flex:           1;
+  padding:        10px;
+  background:     var(--color-bg-card);
+  border:         none;
+  color:          var(--color-text-muted);
+  font-size:      var(--text-xs);
+  font-weight:    500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor:         pointer;
+  font-family:    var(--font-sans);
+  transition:     background var(--transition-base),
+                  color      var(--transition-base);
+}
+ 
+.gallery-filter__btn:hover {
+  background: var(--color-bg-card-hover);
+  color:      var(--color-text-primary);
+}
+ 
+.gallery-filter__btn.active {
+  background: var(--color-accent-subtle);
+  color:      var(--color-accent);
+}
+ 
+/* ── 갤러리 그리드 ───────────────────────────────────── */
+.gallery-grid {
+  display:               grid;
+  grid-template-columns: repeat(3, 1fr);  /* 한 줄에 3장 */
+  gap:                   4px;
+  margin-bottom:         var(--space-xl);
+}
+ 
+/* ── 갤러리 아이템 ───────────────────────────────────── */
+.gallery-item {
+  position:    relative;
+  overflow:    hidden;
+  cursor:      pointer;
+  aspect-ratio: 4 / 3;  /* 가로:세로 비율 고정 */
+  background:  var(--color-bg-card);
+}
+ 
+.gallery-item img {
+  width:      100%;
+  height:     100%;
+  object-fit: cover;
+  display:    block;
+  transition: transform var(--transition-slow);
+}
+ 
+.gallery-item:hover img {
+  transform: scale(1.05);   /* 호버 시 살짝 확대 */
+}
+ 
+/* 호버 오버레이 */
+.gallery-item__overlay {
+  position:   absolute;
+  bottom:     0;
+  left:       0;
+  right:      0;
+  padding:    16px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+  transform:  translateY(100%);        /* 기본: 숨김 */
+  transition: transform var(--transition-base);
+}
+ 
+.gallery-item:hover .gallery-item__overlay {
+  transform: translateY(0);            /* 호버 시 올라옴 */
+}
+ 
+.gallery-item__title {
+  font-size:   var(--text-sm);
+  font-weight: 600;
+  color:       var(--color-text-primary);
+  margin-bottom: 4px;
+}
+ 
+.gallery-item__location {
+  display:     flex;
+  align-items: center;
+  gap:         4px;
+  font-size:   var(--text-xs);
+  color:       var(--color-text-muted);
+}
+ 
+.gallery-item__location svg {
+  width:  11px;
+  height: 11px;
+  fill:   var(--color-accent-dim);
+  flex-shrink: 0;
+}
+ 
+/* 사진 없을 때 placeholder */
+.gallery-item img[src=""],
+.gallery-item img:not([src]) {
+  display: none;
+}
+ 
+.gallery-item:has(img[src=""]),
+.gallery-item:not(:has(img[src])) {
+  background: var(--color-bg-elevated);
+}
+ 
+/* ── 라이트박스 ─────────────────────────────────────── */
+.lightbox {
+  display:         none;
+  position:        fixed;
+  inset:           0;
+  z-index:         999;
+  background:      rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(8px);
+  align-items:     center;
+  justify-content: center;
+}
+ 
+.lightbox.active {
+  display: flex;
+}
+ 
+.lightbox__inner {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  max-width:      880px;
+  width:          90%;
+  gap:            var(--space-md);
+}
+ 
+.lightbox__img {
+  max-width:  100%;
+  max-height: 65vh;
+  object-fit: contain;
+  display:    block;
+  border:     1px solid var(--color-border);
+}
+ 
+.lightbox__info {
+  width:      100%;
+  text-align: center;
+}
+ 
+.lightbox__title {
+  font-size:     var(--text-md);
+  font-weight:   600;
+  color:         var(--color-text-primary);
+  margin-bottom: 6px;
+}
+ 
+.lightbox__desc {
+  font-size:     var(--text-sm);
+  color:         var(--color-text-secondary);
+  line-height:   1.7;
+  margin-bottom: 8px;
+}
+ 
+.lightbox__location {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             5px;
+  font-size:       var(--text-xs);
+  color:           var(--color-text-muted);
+}
+ 
+.lightbox__location svg {
+  width:  12px;
+  height: 12px;
+  fill:   var(--color-accent-dim);
+}
+ 
+/* 닫기 버튼 */
+.lightbox__close {
+  position:    fixed;
+  top:         20px;
+  right:       24px;
+  background:  none;
+  border:      1px solid var(--color-border-light);
+  color:       var(--color-text-muted);
+  font-size:   18px;
+  width:       40px;
+  height:      40px;
+  cursor:      pointer;
+  font-family: var(--font-sans);
+  transition:  color        var(--transition-fast),
+               border-color var(--transition-fast);
+  display:     flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.lightbox__close:hover {
+  color:        var(--color-text-primary);
+  border-color: var(--color-text-primary);
+}
+ 
+/* 이전/다음 버튼 */
+.lightbox__prev,
+.lightbox__next {
+  position:    fixed;
+  top:         50%;
+  transform:   translateY(-50%);
+  background:  none;
+  border:      1px solid var(--color-border-light);
+  color:       var(--color-text-muted);
+  font-size:   28px;
+  width:       48px;
+  height:      48px;
+  cursor:      pointer;
+  font-family: var(--font-sans);
+  line-height: 1;
+  transition:  color        var(--transition-fast),
+               border-color var(--transition-fast);
+  display:     flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.lightbox__prev { left:  16px; }
+.lightbox__next { right: 16px; }
+ 
+.lightbox__prev:hover,
+.lightbox__next:hover {
+  color:        var(--color-accent);
+  border-color: var(--color-accent);
+}
+ 
+/* ── 반응형 ─────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  .gallery-filter {
+    flex-wrap: wrap;
+  }
+ 
+  .gallery-filter__btn {
+    flex: none;
+    width: calc(50% - 1px);
+  }
+ 
+  .lightbox__prev { left:  4px; }
+  .lightbox__next { right: 4px; }
+}
+ 
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}

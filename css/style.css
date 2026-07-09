@@ -873,3 +873,203 @@ img {
 .project-card__body strong {
   color: var(--color-text-primary);
 }
+
+/* =====================================================
+   CV PAGE
+   ===================================================== */
+ 
+/* 헤더 행 — 제목 + PDF 버튼 가로 배치 */
+.cv-header-row {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  gap:             var(--space-md);
+}
+ 
+/* ── Basics 테이블 ─────────────────────────────────── */
+.cv-table-wrap {
+  border: 1px solid var(--color-border);
+}
+ 
+.cv-table {
+  width:           100%;
+  border-collapse: collapse;
+}
+ 
+.cv-table tr {
+  border-bottom: 1px solid var(--color-border);
+}
+ 
+.cv-table tr:last-child {
+  border-bottom: none;
+}
+ 
+.cv-table__label {
+  width:          130px;
+  padding:        12px 20px;
+  font-size:      var(--text-xs);
+  font-weight:    600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color:          var(--color-accent-dim);
+  background:     var(--color-bg-card);
+  vertical-align: top;
+  white-space:    nowrap;
+}
+ 
+.cv-table__value {
+  padding:     12px 20px;
+  font-size:   var(--text-sm);
+  color:       var(--color-text-secondary);
+  line-height: 1.75;
+}
+ 
+.cv-table__value a {
+  color:      var(--color-accent);
+  transition: color var(--transition-fast);
+}
+ 
+.cv-table__value a:hover {
+  color: var(--color-text-primary);
+}
+ 
+/* ── CV 항목 리스트 ────────────────────────────────── */
+.cv-list {
+  display:        flex;
+  flex-direction: column;
+  gap:            1px;
+  background:     var(--color-border);
+}
+ 
+.cv-item {
+  display:               grid;
+  grid-template-columns: 160px 1fr;
+  gap:                   var(--space-lg);
+  padding:               var(--space-md) var(--space-lg);
+  background:            var(--color-bg-card);
+  transition:            background var(--transition-base);
+}
+ 
+.cv-item:hover {
+  background: var(--color-bg-card-hover);
+}
+ 
+.cv-item__period {
+  font-size:      var(--text-xs);
+  color:          var(--color-accent-dim);
+  font-weight:    500;
+  letter-spacing: 0.04em;
+  padding-top:    2px;
+  white-space:    nowrap;
+}
+ 
+.cv-item__title {
+  font-size:     var(--text-base);
+  font-weight:   600;
+  color:         var(--color-text-primary);
+  margin-bottom: 4px;
+  line-height:   1.4;
+}
+ 
+.cv-item__title a {
+  color:      var(--color-text-primary);
+  transition: color var(--transition-fast);
+}
+ 
+.cv-item__title a:hover {
+  color: var(--color-accent);
+}
+ 
+.cv-item__org {
+  font-size:     var(--text-sm);
+  color:         var(--color-text-secondary);
+  margin-bottom: 2px;
+}
+ 
+.cv-item__dept {
+  font-size:     var(--text-sm);
+  color:         var(--color-text-muted);
+  margin-bottom: 2px;
+}
+ 
+.cv-item__location {
+  font-size: var(--text-xs);
+  color:     var(--color-text-faint);
+}
+ 
+.cv-item__note {
+  font-size:   var(--text-xs);
+  color:       var(--color-text-muted);
+  margin-top:  6px;
+  font-style:  italic;
+  line-height: 1.6;
+}
+ 
+/* ── Research Interests ────────────────────────────── */
+.cv-interests {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   1px;
+  background:            var(--color-border);
+}
+ 
+.cv-interest-group {
+  background: var(--color-bg-card);
+  padding:    var(--space-md);
+}
+ 
+.cv-interest-group__title {
+  font-size:      var(--text-xs);
+  font-weight:    600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color:          var(--color-accent-dim);
+  margin-bottom:  var(--space-sm);
+}
+ 
+.cv-interest-group__tags {
+  display:   flex;
+  flex-wrap: wrap;
+  gap:       6px;
+}
+ 
+.cv-tag {
+  display:        inline-block;
+  font-size:      var(--text-xs);
+  color:          var(--color-text-secondary);
+  border:         1px solid var(--color-border-light);
+  padding:        4px 10px;
+  letter-spacing: 0.03em;
+  transition:     border-color var(--transition-fast),
+                  color        var(--transition-fast);
+}
+ 
+.cv-tag:hover {
+  border-color: var(--color-accent-dim);
+  color:        var(--color-text-primary);
+}
+ 
+/* ── 반응형 ────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .cv-header-row {
+    flex-direction: column;
+    align-items:    flex-start;
+  }
+ 
+  .cv-item {
+    grid-template-columns: 1fr;
+    gap:                   6px;
+  }
+ 
+  .cv-item__period {
+    color: var(--color-accent);
+  }
+ 
+  .cv-table__label {
+    width: 90px;
+  }
+ 
+  .cv-interests {
+    grid-template-columns: 1fr;
+  }
+}

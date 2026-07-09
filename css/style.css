@@ -35,7 +35,7 @@ body::before {
   z-index:    -1;              /* 콘텐츠 뒤에 위치 */
  
   background-color:      #0a0a0a;              /* 사진 로딩 전 폴백 */
-  background-image:      url('/images/background/HET.jpg');
+  background-image:      url('images/background/HET.jpg');
   background-size:       cover;
   background-position:   center center;
   background-attachment: fixed;

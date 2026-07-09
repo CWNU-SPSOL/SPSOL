@@ -474,6 +474,26 @@ img {
   background: var(--color-bg-card-hover);
 }
 
+/* ── 카드 사진 영역 ──────────────────────────────── */
+.research-card__img {
+  width:       100%;
+  height:      180px;          /* ← 사진 높이 조절 */
+  object-fit:  cover;          /* 비율 유지하며 꽉 채움 */
+  object-position: center;
+  display:     block;
+  filter:      brightness(0.85);             /* 살짝 어둡게 */
+  transition:  filter var(--transition-base);
+}
+ 
+.research-card:hover .research-card__img {
+  filter: brightness(1.0);     /* 호버 시 원래 밝기로 */
+}
+ 
+/* ── 카드 텍스트 영역 ────────────────────────────── */
+.research-card__body {
+  padding: 22px 24px;
+}
+
 .research-card__tag {
   font-size:      var(--text-xs);
   letter-spacing: 0.12em;
@@ -493,10 +513,6 @@ img {
   font-size:   var(--text-sm);
   color:       var(--color-text-muted);
   line-height: 1.75;
-}
-
-.research-card__img {
-  height: 180px;   /* ← 원하는 높이로 변경 */
 }
 
 /* =====================================================

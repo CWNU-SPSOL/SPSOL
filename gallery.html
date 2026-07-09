@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery · SPSOL CWNU</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav__brand" href="index.html">
+    <img src="images/logos/SPSOL.png" alt="SPSOL" height="42">
+  </a>
+  <ul class="nav__links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="people.html">People</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- 페이지 헤더 -->
+  <div class="page-header">
+    <div class="page-header__eyebrow">Lab Life & Research</div>
+    <h1 class="page-header__title">Gallery</h1>
+    <p class="page-header__desc">
+      연구실 활동, 실험 장면, 학회 참가 등의 사진을 모아두었습니다.
+    </p>
+  </div>
+
+  <!-- 필터 탭 -->
+  <div class="gallery-filter">
+    <button class="gallery-filter__btn active" data-filter="all">All</button>
+    <button class="gallery-filter__btn" data-filter="lab">Lab</button>
+    <button class="gallery-filter__btn" data-filter="conference">Conference</button>
+    <button class="gallery-filter__btn" data-filter="experiment">Experiment</button>
+    <button class="gallery-filter__btn" data-filter="event">Events</button>
+  </div>
+
+  <!-- 갤러리 그리드 -->
+  <div class="gallery-grid" id="galleryGrid">
+
+    <!-- 사진 추가 방법:
+         1. images/gallery/ 폴더에 사진 넣기
+         2. 아래 gallery-item 블록 복사해서 붙여넣기
+         3. src, data-category, data-title, data-desc, data-location 수정 -->
+
+    <!-- <div class="gallery-item" data-category="experiment"
+         data-title="Vacuum Chamber Testing"
+         data-desc="홀 추력기 진공 챔버 성능 시험. 압력 6×10⁻⁴ Pa 조건에서 측정."
+         data-location="창원대학교 추진 연구실">
+      <img src="images/gallery/exp1.jpg" alt="Vacuum Chamber Testing">
+      <div class="gallery-item__overlay">
+        <div class="gallery-item__title">Vacuum Chamber Testing</div>
+        <div class="gallery-item__location">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          창원대학교 추진 연구실
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="conference"
+         data-title="KSAS 추계학술대회 2025"
+         data-desc="한국항공우주학회 추계학술대회에서 전기추진 세션 발표."
+         data-location="제주, 대한민국">
+      <img src="images/gallery/conf1.jpg" alt="KSAS Conference 2025">
+      <div class="gallery-item__overlay">
+        <div class="gallery-item__title">KSAS 추계학술대회 2025</div>
+        <div class="gallery-item__location">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          제주, 대한민국
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="lab"
+         data-title="연구실 개소식"
+         data-desc="2025년 8월 SPSOL 연구실 개소식."
+         data-location="창원대학교">
+      <img src="images/gallery/lab1.jpg" alt="Lab Opening">
+      <div class="gallery-item__overlay">
+        <div class="gallery-item__title">연구실 개소식</div>
+        <div class="gallery-item__location">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          창원대학교
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="experiment"
+         data-title="Plasma Diagnostics"
+         data-desc="Faraday probe를 이용한 플룸 전류 밀도 측정."
+         data-location="창원대학교 추진 연구실">
+      <img src="images/gallery/exp2.jpg" alt="Plasma Diagnostics">
+      <div class="gallery-item__overlay">
+        <div class="gallery-item__title">Plasma Diagnostics</div>
+        <div class="gallery-item__location">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          창원대학교 추진 연구실
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="conference"
+         data-title="AIAA Propulsion 2024"
+         data-desc="AIAA Propulsion and Energy Forum 2024 포스터 발표."
+         data-location="Indianapolis, IN, USA">
+      <img src="images/gallery/conf2.jpg" alt="AIAA 2024">
+      <div class="gallery-item__overlay">
+        <div class="gallery-item__title">AIAA Propulsion 2024</div>
+        <div class="gallery-item__location">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          Indianapolis, IN, USA
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="event"
+         data-title="신입생 환영회"
+         data-desc="2026년 봄학기 신입 연구원 환영 행사."
+         data-location="창원, 대한민국">
+      <img src="images/gallery/event1.jpg" alt="Welcome Party">
+      <div class="gallery-item__overlay">
+        <div class="gallery-item__title">신입생 환영회</div>
+        <div class="gallery-item__location">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          창원, 대한민국
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="lab"
+         data-title="연구실 전경"
+         data-desc="SPSOL 연구실 내부 전경."
+         data-location="창원대학교 항공우주공학과">
+      <img src="images/gallery/lab2.jpg" alt="Lab Interior">
+      <div class="gallery-item__overlay">
+        <div class="gallery-item__title">연구실 전경</div>
+        <div class="gallery-item__location">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          창원대학교 항공우주공학과
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="experiment"
+         data-title="OES Measurement"
+         data-desc="광학 방출 분광법(OES)을 이용한 방전 채널 내부 진단."
+         data-location="창원대학교 추진 연구실">
+      <img src="images/gallery/exp3.jpg" alt="OES Measurement">
+      <div class="gallery-item__overlay">
+        <div class="gallery-item__title">OES Measurement</div>
+        <div class="gallery-item__location">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          창원대학교 추진 연구실
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-item" data-category="event"
+         data-title="졸업 축하"
+         data-desc="2025년 2월 졸업생 축하 행사."
+         data-location="창원대학교">
+      <img src="images/gallery/event2.jpg" alt="Graduation">
+      <div class="gallery-item__overlay">
+        <div class="gallery-item__title">졸업 축하</div>
+        <div class="gallery-item__location">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          창원대학교
+        </div>
+      </div>
+    </div> -->
+
+  </div><!-- /gallery-grid -->
+
+
+  <!-- =====================================================
+       라이트박스 (사진 클릭 시 팝업)
+       ===================================================== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lbClose">✕</button>
+    <button class="lightbox__prev"  id="lbPrev">‹</button>
+    <button class="lightbox__next"  id="lbNext">›</button>
+    <div class="lightbox__inner">
+      <img src="" alt="" class="lightbox__img" id="lbImg">
+      <div class="lightbox__info">
+        <div class="lightbox__title"    id="lbTitle"></div>
+        <div class="lightbox__desc"     id="lbDesc"></div>
+        <div class="lightbox__location" id="lbLocation">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__left">
+      COPYRIGHT<sup>©</sup> 2026 YEO Suk Hyun · Space Propulsion Systems and Optimization Lab. All rights reserved.
+    </div>
+    <div class="footer__right">
+      <img src="images/logos/CWNU.png" alt="CWNU" height="16">
+    </div>
+  </footer>
+
+</div><!-- /page -->
+
+<script src="js/main.js"></script>
+<script>
+// ── 갤러리 필터 ───────────────────────────────────────
+const filterBtns  = document.querySelectorAll('.gallery-filter__btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    galleryItems.forEach(item => {
+      const show = filter === 'all' || item.dataset.category === filter;
+      item.style.display = show ? 'block' : 'none';
+    });
+  });
+});
+
+// ── 라이트박스 ────────────────────────────────────────
+const lightbox = document.getElementById('lightbox');
+const lbImg    = document.getElementById('lbImg');
+const lbTitle  = document.getElementById('lbTitle');
+const lbDesc   = document.getElementById('lbDesc');
+const lbLoc    = document.getElementById('lbLocation').querySelector('span');
+
+let currentIndex = 0;
+let visibleItems = [];
+
+function openLightbox(index) {
+  visibleItems = [...galleryItems].filter(i => i.style.display !== 'none');
+  currentIndex = index;
+  updateLightbox();
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function updateLightbox() {
+  const item = visibleItems[currentIndex];
+  const img  = item.querySelector('img');
+  lbImg.src       = img.src;
+  lbImg.alt       = img.alt;
+  lbTitle.textContent = item.dataset.title    || '';
+  lbDesc.textContent  = item.dataset.desc     || '';
+  lbLoc.textContent   = item.dataset.location || '';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// 각 아이템 클릭 이벤트
+galleryItems.forEach((item, i) => {
+  item.addEventListener('click', () => {
+    visibleItems = [...galleryItems].filter(el => el.style.display !== 'none');
+    const visIdx = visibleItems.indexOf(item);
+    openLightbox(visIdx);
+  });
+});
+
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+
+document.getElementById('lbPrev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+  updateLightbox();
+});
+
+document.getElementById('lbNext').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % visibleItems.length;
+  updateLightbox();
+});
+
+// 배경 클릭 시 닫기
+lightbox.addEventListener('click', e => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+// 키보드 조작
+document.addEventListener('keydown', e => {
+  if (!lightbox.classList.contains('active')) return;
+  if (e.key === 'Escape')     closeLightbox();
+  if (e.key === 'ArrowLeft')  { currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length; updateLightbox(); }
+  if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % visibleItems.length; updateLightbox(); }
+});
+</script>
+</body>
+</html>

@@ -262,41 +262,87 @@
   <div class="section" id="contact">
     <h2 class="section__title">Contact</h2>
     <div class="contact-grid">
-
+ 
+      <!-- 왼쪽: 연락처 정보 -->
       <div class="contact-left">
         <div class="cinfo-block">
           <div class="cinfo-label">Address</div>
-          <div class="cinfo-value">사천우주항공캠퍼스<br>국립창원대학교(CWNU)<br>경남 사천시 사남면 방지로 70, 2층<br>52535</div>
+          <div class="cinfo-value">사천우주항공캠퍼스<br>국립창원대학교(CWNU)<br>경남 사천시 사남면 방지로 70 사천시 산업단지 복합문화센터, 2층<br>52535</div>
         </div>
-        <div class="cinfo-block">
-          <div class="cinfo-label">Phone</div>
-          <div class="cinfo-value">055-213-3990</div>
-        </div>
-        <div class="cinfo-block">
-          <div class="cinfo-label">Office Hours</div>
-          <div class="cinfo-value">화·수·목 14:00 – 16:00<br>또는 <a href="mailto:shy@changwon.ac.kr" title="Email">이메일</a>로 예약</div>
-        </div>
-      </div>
 
+        <!-- Google Maps 임베드 -->
+        <div class="cinfo-block">
+          <div class="cinfo-label">Location</div>
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps?q=35.062916189038724,128.04932529474124&z=17&output=embed"
+              
+              width="100%"
+              height="180"
+              style="border:0;display:block;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+ 
+      </div>
+ 
+      <!-- 오른쪽: 프로필 카드 -->
       <div class="contact-right">
-        <div>
-          <div class="contact-right__name">YEO, Suk Hyun</div>
-          <div class="contact-right__pos">Assistant Professor<br>Dept. of Aerospace Engineering, CWNU</div>
-        </div>
-        <div>
-          <!-- <div class="cinfo-label" style="margin-bottom: 8px;">Links</div>
-          <div class="social-row">
-            <a href="docs/CV.pdf"  target="_blank" class="btn">CV</a>
-            <a href="#"            target="_blank" class="btn">Google Scholar</a>
-            <a href="#"            target="_blank" class="btn">ORCID</a>
-            <a href="#"            target="_blank" class="btn">ResearchGate</a>
-          </div> -->
-        </div>
-        <div style="font-size:13px;color:var(--muted2)">
-          shy@changwon.ac.kr
-        </div>
-      </div>
 
+        <div class="contact-right__top">
+ 
+          <!-- 왼쪽: 이름 + 직책 --> 
+          <div>
+            <div class="contact-right__name">YEO, Suk Hyun</div>
+            <div class="contact-right__pos">Assistant Professor<br>School of Aerospace Engineering<br> Changwon National University</div>
+            
+            <p style="margin-top:30px; margin-bottom:30px;"></p>
+            
+            <div class="cinfo-block">
+              <div class="cinfo-label">Phone</div>
+              <div class="cinfo-value">055-213-3990</div>
+              <div class="cinfo-label">Email</div>
+              <div class="cinfo-value"><a href="mailto:shy@changwon.ac.kr">shy@changwon.ac.kr</a></div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 링크 버튼 세로 배치 -->
+          <div class="social-col">
+            <a href="publication.html" class="btn">Publications</a>
+            <a href="https://scholar.google.com/citations?user=ywBqXnMAAAAJ&hl=en" target="_blank" class="btn">Google Scholar</a>
+            <!-- <a href="https://www.linkedin.com/feed/" target="_blank" class="btn">LinkedIn</a> -->
+            
+            <p style="margin-top:10px; margin-bottom:10px;"></p>
+
+            <div class="cinfo-block">
+              <div class="cinfo-label">Office Hours</div>
+              <div class="cinfo-value">화·수·목 14:00 – 16:00<br>또는 <a href="mailto:shy@changwon.ac.kr">이메일</a>로 예약</div>
+            </div>
+          </div>
+          
+
+        </div> 
+
+          <!-- 프로필 사진 -->
+          <!-- <div class="contact-right__photo">
+            <img src="images/profile/profile_downsized_35x45mm.jpg" alt="Prof. Yeo">
+          </div> -->
+  
+          <!-- 채용 안내 -->
+          <!-- <div class="contact-right__hiring">
+            <div class="cinfo-label" style="margin-bottom: 6px;">Join Us</div>
+            <p>전기추진·플라즈마·우주시스템에 관심 있는 석·박사 과정생을 모집합니다.</p>
+            <a href="mailto:shy@changwon.ac.kr" class="hiring-email" style="margin-top:8px;">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              shy@changwon.ac.kr
+            </a>
+          </div> -->   
+ 
+      </div>
+ 
     </div>
   </div><!-- /contact -->
 

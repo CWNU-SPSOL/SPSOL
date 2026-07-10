@@ -26,6 +26,7 @@
   /* 테두리 계열 */
   --color-border:         #2c2c2c;   /* 기본 구분선 */
   --color-border-light:   #383838;   /* 밝은 구분선 */
+  --color-border-lighter: #888888;   /* 더 밝은 구분선 */
 
   /* 텍스트 계열 */
   --color-text-primary:   #f0f0f0;   /* 제목, 강조 텍스트 */

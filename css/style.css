@@ -585,7 +585,7 @@ img {
    ===================================================== */
 .contact-grid {
   display:               grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   gap:                   48px;
   align-items:           start;
 }
@@ -635,6 +635,67 @@ img {
   display:   flex;
   gap:       8px;
   flex-wrap: wrap;
+}
+ 
+.cinfo-block {
+  display:        flex;
+  flex-direction: column;
+}
+ 
+.cinfo-value a {
+  color:      var(--color-accent);
+  transition: color var(--transition-fast);
+}
+ 
+.cinfo-value a:hover {
+  color: var(--color-text-primary);
+}
+ 
+/* 지도 */
+.contact-map {
+  border:   1px solid var(--color-border);
+  overflow: hidden;
+  margin-top: 4px;
+  filter:   grayscale(30%) brightness(0.85);  /* 어두운 테마에 맞게 */
+  transition: filter var(--transition-base);
+}
+ 
+.contact-map:hover {
+  filter: grayscale(0%) brightness(1);
+}
+ 
+/* 오른쪽 카드 프로필 사진 */
+.contact-right__photo {
+  width:  100%;
+  height: 180px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+ 
+.contact-right__photo img {
+  width:      100%;
+  height:     100%;
+  object-fit: cover;
+  object-position: center top;
+  display:    block;
+  transition: transform var(--transition-slow);
+}
+ 
+.contact-right__photo:hover img {
+  transform: scale(1.03);
+}
+ 
+/* 채용 안내 박스 */
+.contact-right__hiring {
+  border-top:  1px solid var(--color-border);
+  padding-top: var(--space-sm);
+}
+ 
+.contact-right__hiring p {
+  font-size:   var(--text-xs);
+  color:       var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 8px;
 }
  
 /* =====================================================

@@ -585,7 +585,7 @@ img {
    ===================================================== */
 .contact-grid {
   display:               grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1.25fr;
   gap:                   48px;
   align-items:           start;
 }
@@ -644,7 +644,7 @@ img {
   display:        flex;
   flex-direction: column;
   gap:            6px;
-  flex-shrink:    0;   /* 버튼이 찌그러지지 않도록 */
+  flex-shrink:    0;
 }
  
 .social-row {
@@ -652,7 +652,7 @@ img {
   gap:       8px;
   flex-wrap: wrap;
 }
- 
+
 .cinfo-block {
   display:        flex;
   flex-direction: column;

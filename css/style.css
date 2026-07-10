@@ -3,18 +3,18 @@
    컴포넌트 스타일 정의
    색상·폰트는 theme.css 변수를 참조함
    ===================================================== */
-
+ 
 /* ── 리셋 & 베이스 ───────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
+ 
 html {
   scroll-behavior: smooth;
 }
-
+ 
 /* body {
   background:             var(--color-bg-base);
   color:                  var(--color-text-primary);
@@ -23,7 +23,7 @@ html {
   line-height:            1.75;
   -webkit-font-smoothing: antialiased;
 } */
-
+ 
 /* ── 배경 블러 + 어두운 오버레이 ────────────────────
    body::before 로 배경 위에 효과를 덧씌움
    ─────────────────────────────────────────────────── */
@@ -54,7 +54,7 @@ body::after {
   z-index:    -1;
   background: rgba(0, 0, 0, 0.75);   /* ← 숫자 높일수록 더 어두움 */
 }
-
+ 
 /* 모바일 — scroll 로 변경 */
 @media (max-width: 700px) {
   body {
@@ -62,29 +62,29 @@ body::after {
     background-position: center top;
   }
 }
-
+ 
 a {
   color: inherit;
   text-decoration: none;
 }
-
+ 
 img {
   display: block;
   max-width: 100%;
 }
-
+ 
 /* ── 스크롤바 ─────────────────────────────────────── */
 ::-webkit-scrollbar        { width: 4px; }
 ::-webkit-scrollbar-track  { background: var(--color-bg-base); }
 ::-webkit-scrollbar-thumb  { background: var(--color-border); }
-
+ 
 /* ── 레이아웃 래퍼 ───────────────────────────────── */
 /* .page {
   max-width: var(--max-width);
   margin:    0 auto;
   padding:   0 var(--page-padding-x);
 } */
-
+ 
 .page {
   max-width:        var(--max-width);
   margin:           0 auto;
@@ -110,7 +110,7 @@ img {
   backdrop-filter: blur(10px);
   border-bottom:   1px solid var(--color-border);
 }
-
+ 
 .nav__brand {
   font-weight:    700;
   font-size:      var(--text-xl);
@@ -118,13 +118,13 @@ img {
   color:          var(--color-accent);
   letter-spacing: 0.02em;
 }
-
+ 
 .nav__links {
   display:    flex;
   gap:        0;
   list-style: none;
 }
-
+ 
 .nav__links a {
   display:        block;
   padding:        0 18px;
@@ -139,12 +139,12 @@ img {
   border-left:    1px solid var(--color-border);
   transition:     color var(--transition-base);
 }
-
+ 
 .nav__links a:hover,
 .nav__links a.active {
   color: var(--color-text-primary);
 }
-
+ 
 /* =====================================================
    HERO
    ===================================================== */
@@ -190,7 +190,7 @@ img {
   position: relative;
   z-index:  2;
 }
-
+ 
 .hero__eyebrow {
   font-size:      var(--text-xs);
   letter-spacing: 0.2em;
@@ -198,7 +198,7 @@ img {
   color:          var(--color-accent-dim);
   margin-bottom:  var(--space-md);
 }
-
+ 
 .hero__name {
   font-family:   var(--font-serif);
   font-size:     var(--text-3xl);
@@ -207,20 +207,20 @@ img {
   line-height:   1.05;
   margin-bottom: 6px;
 }
-
+ 
 .hero__position {
   font-size:     var(--text-sm);
   color:         var(--color-text-muted);
   margin-bottom: 4px;
   font-weight:   400;
 }
-
+ 
 .hero__affil {
   font-size:     var(--text-sm);
   color:         var(--color-text-dim);
   margin-bottom: var(--space-lg);
 }
-
+ 
 .hero__bio {
   font-size:     var(--text-base);
   color:         var(--color-text-secondary);
@@ -228,7 +228,7 @@ img {
   max-width:     520px;
   margin-bottom: var(--space-lg);
 }
-
+ 
 /* 히어로 버튼 & 아이콘 행 */
 .hero__links {
   display:     flex;
@@ -236,7 +236,7 @@ img {
   gap:         var(--space-xs);
   align-items: center;
 }
-
+ 
 /* 히어로 오른쪽 (사진 + 연락처) */
 .hero__right {
   display:        flex;
@@ -245,13 +245,18 @@ img {
   gap:            var(--space-md);
   padding-top:    8px;
 }
-
+ 
+/* 모바일 전용 사진 — PC에서는 숨김 */
+.hero__mobile-photo {
+  display: none;
+}
+ 
 /* 프로필 사진 */
 .profile-wrap {
   position: relative;
   width:    180px;
 }
-
+ 
 .profile-photo {
   width:           160px;
   height:          200px;
@@ -267,13 +272,13 @@ img {
   letter-spacing:  0.08em;
   overflow:        hidden;
 }
-
+ 
 .profile-photo img {
   width:      100%;
   height:     100%;
   object-fit: cover;
 }
-
+ 
 /* 사진 뒤 장식 테두리 */
 .profile-deco {
   position:   absolute;
@@ -284,7 +289,7 @@ img {
   border:     1px solid var(--color-border);
   z-index:    -1;
 }
-
+ 
 /* 연락처 칩 (사진 아래) */
 .hero-contacts {
   width:          100%;
@@ -292,7 +297,7 @@ img {
   flex-direction: column;
   gap:            6px;
 }
-
+ 
 .contact-chip {
   display:     flex;
   align-items: center;
@@ -300,18 +305,18 @@ img {
   font-size:   var(--text-xs);
   color:       var(--color-text-muted);
 }
-
+ 
 .contact-chip svg {
   width:     13px;
   height:    13px;
   fill:      var(--color-accent-dim);
   flex-shrink: 0;
 }
-
+ 
 /* =====================================================
    BUTTONS & ICON LINKS
    ===================================================== */
-
+ 
 /* 텍스트 버튼 (아웃라인) */
 .btn {
   display:        inline-flex;
@@ -327,12 +332,12 @@ img {
                   color        var(--transition-base);
   cursor:         pointer;
 }
-
+ 
 .btn:hover {
   border-color: var(--color-accent);
   color:        var(--color-accent);
 }
-
+ 
 /* 강조 버튼 (채워진) */
 .btn--primary {
   background:   var(--color-accent);
@@ -340,13 +345,13 @@ img {
   color:        #0a0a0a;
   font-weight:  600;
 }
-
+ 
 .btn--primary:hover {
   background:   var(--color-text-primary);
   border-color: var(--color-text-primary);
   color:        #0a0a0a;
 }
-
+ 
 /* 아이콘 전용 버튼 */
 .icon-btn {
   display:         inline-flex;
@@ -359,18 +364,18 @@ img {
   transition:      color         var(--transition-base),
                    border-color  var(--transition-base);
 }
-
+ 
 .icon-btn svg {
   width:  15px;
   height: 15px;
   fill:   currentColor;
 }
-
+ 
 .icon-btn:hover {
   color:        var(--color-accent);
   border-color: var(--color-accent);
 }
-
+ 
 /* =====================================================
    SECTION 공통
    ===================================================== */
@@ -378,7 +383,7 @@ img {
   padding:       var(--space-xl) 0;
   border-bottom: 1px solid var(--color-border);
 }
-
+ 
 /* 섹션 제목 (오른쪽 구분선 포함) */
 .section__title {
   font-family:   var(--font-serif);
@@ -390,25 +395,25 @@ img {
   align-items:   center;
   gap:           14px;
 }
-
+ 
 .section__title::after {
   content:    '';
   flex:       1;
   height:     1px;
   background: var(--color-border);
 }
-
+ 
 /* =====================================================
    NEWS
    ===================================================== */
-
+ 
 /* 배경 사진 — 블러 처리 */
 .news-list {
   display:        flex;
   flex-direction: column;
   gap:            0;
 }
-
+ 
 .news-item {
   display:               grid;
   grid-template-columns: 110px 1fr;
@@ -416,11 +421,11 @@ img {
   padding:               var(--space-sm) 0;
   border-bottom:         1px solid var(--color-border);
 }
-
+ 
 .news-item:last-child {
   border-bottom: none;
 }
-
+ 
 .news-item__date {
   font-size:      var(--text-xs);
   color:          var(--color-accent-dim);
@@ -429,21 +434,21 @@ img {
   padding-top:    2px;
   flex-shrink:    0;
 }
-
+ 
 .news-item__text {
   font-size:   var(--text-sm);
   color:       var(--color-text-secondary);
   line-height: 1.75;
 }
-
+ 
 .news-item__text a {
   color: var(--color-accent);
 }
-
+ 
 .news-item__text a:hover {
   text-decoration: underline;
 }
-
+ 
 /* 뉴스 배지 */
 .badge {
   display:        inline-block;
@@ -456,12 +461,12 @@ img {
   margin-right:   6px;
   vertical-align: middle;
 }
-
+ 
 .badge--accent {
   background: var(--color-accent-subtle);
   color:      var(--color-accent);
 }
-
+ 
 /* =====================================================
    RESEARCH GRID
    ===================================================== */
@@ -471,17 +476,17 @@ img {
   gap:                   1px;
   background:            var(--color-border);
 }
-
+ 
 .research-card {
   background:  var(--color-bg-card);
   padding:     28px 26px;
   transition:  background var(--transition-base);
 }
-
+ 
 .research-card:hover {
   background: var(--color-bg-card-hover);
 }
-
+ 
 /* ── 카드 사진 영역 ──────────────────────────────── */
 .research-card__img {
   width:       100%;
@@ -501,7 +506,7 @@ img {
 .research-card__body {
   padding: 22px 24px;
 }
-
+ 
 .research-card__tag {
   font-size:      var(--text-xs);
   letter-spacing: 0.12em;
@@ -509,20 +514,20 @@ img {
   color:          var(--color-accent-dim);
   margin-bottom:  var(--space-xs);
 }
-
+ 
 .research-card__title {
   font-size:     var(--text-md);
   font-weight:   600;
   color:         var(--color-text-primary);
   margin-bottom: var(--space-xs);
 }
-
+ 
 .research-card__desc {
   font-size:   var(--text-sm);
   color:       var(--color-text-muted);
   line-height: 1.75;
 }
-
+ 
 /* =====================================================
    HIRING
    ===================================================== */
@@ -531,7 +536,7 @@ img {
   padding:  var(--space-lg);
   position: relative;
 }
-
+ 
 .hiring-box::before {
   content:        'NOW HIRING';
   position:       absolute;
@@ -542,18 +547,18 @@ img {
   color:          var(--color-accent-dim);
   opacity:        0.6;
 }
-
+ 
 .hiring-box p {
   font-size:     var(--text-base);
   color:         var(--color-text-secondary);
   line-height:   1.85;
   margin-bottom: var(--space-sm);
 }
-
+ 
 .hiring-box strong {
   color: var(--color-text-primary);
 }
-
+ 
 .hiring-email {
   display:        inline-flex;
   align-items:    center;
@@ -564,17 +569,17 @@ img {
   padding-bottom: 2px;
   transition:     color var(--transition-base);
 }
-
+ 
 .hiring-email svg {
   width: 14px;
   height: 14px;
   fill: var(--color-accent);
 }
-
+ 
 .hiring-email:hover {
   color: var(--color-text-primary);
 }
-
+ 
 /* =====================================================
    CONTACT
    ===================================================== */
@@ -584,13 +589,13 @@ img {
   gap:                   48px;
   align-items:           start;
 }
-
+ 
 .contact-left {
   display:        flex;
   flex-direction: column;
   gap:            var(--space-md);
 }
-
+ 
 .cinfo-label {
   font-size:      var(--text-xs);
   letter-spacing: 0.14em;
@@ -598,13 +603,13 @@ img {
   color:          var(--color-accent-dim);
   margin-bottom:  6px;
 }
-
+ 
 .cinfo-value {
   font-size:   var(--text-sm);
   color:       var(--color-text-secondary);
   line-height: 1.75;
 }
-
+ 
 .contact-right {
   background:     var(--color-bg-card);
   border:         1px solid var(--color-border);
@@ -613,25 +618,25 @@ img {
   flex-direction: column;
   gap:            var(--space-sm);
 }
-
+ 
 .contact-right__name {
   font-family:   var(--font-serif);
   font-size:     var(--text-lg);
   color:         var(--color-text-primary);
   margin-bottom: 4px;
 }
-
+ 
 .contact-right__pos {
   font-size: var(--text-xs);
   color:     var(--color-text-muted);
 }
-
+ 
 .social-row {
   display:   flex;
   gap:       8px;
   flex-wrap: wrap;
 }
-
+ 
 /* =====================================================
    FOOTER
    ===================================================== */
@@ -641,17 +646,17 @@ img {
   align-items:     center;
   padding:         var(--space-xs) 0;
 }
-
+ 
 .footer__left {
   font-size: var(--text-sm);
   color:     var(--color-text-faint);
 }
-
+ 
 .footer__right {
   font-size: var(--text-xs);
   color:     var(--color-text-faint);
 }
-
+ 
 .footer__right img {
   display:    block;
   height:     16px;
@@ -659,7 +664,7 @@ img {
   object-fit: contain;
   opacity:    0.9;
 }
-
+ 
 /* =====================================================
    RESPONSIVE
    ===================================================== */
@@ -667,53 +672,71 @@ img {
   .nav {
     padding: 0 var(--space-md);
   }
-
+ 
   .nav__links a {
     padding:   0 12px;
     font-size: 10px;
   }
-
+ 
   .page {
     padding: 0 var(--space-sm);
   }
-
+ 
   .hero {
     grid-template-columns: 1fr;
-    gap:                   var(--space-lg);
-    padding: var(--space-xl) var(--page-padding-x) var(--space-lg);
-    /* padding:               var(--space-xl) 0 var(--space-lg); */
+    gap:                   var(--space-md);
+    padding:               var(--space-xl) var(--page-padding-x) var(--space-lg);
   }
-
+ 
+  /* 모바일에서 hero 배경사진 크기 고정 */
+  .hero::before {
+    background-size:       cover;
+    background-position:   right center;
+    background-attachment: scroll;   /* 모바일에서 fixed 제거 */
+    transform:             scale(1); /* scale 제거 — 모바일에서 불필요 */
+  }
+ 
+  /* PC의 오른쪽 사진 영역 숨김 */
   .hero__right {
-    align-items:    flex-start;
-    flex-direction: row;
-    flex-wrap:      wrap;
+    display: none;
   }
-
-  .profile-wrap,
-  .profile-photo {
-    width: 140px;
+ 
+  /* 모바일 전용 사진 표시 */
+  .hero__mobile-photo {
+    display:      block;
+    float:        right;          /* 이름 옆 오른쪽에 배치 */
+    margin-left:  var(--space-sm);
+    margin-bottom: var(--space-sm);
+    clear:        right;
   }
-
-  .profile-photo {
-    height: 170px;
+ 
+  .hero__mobile-photo img {
+    width:      88px;
+    height:     112px;
+    object-fit: cover;
+    border:     1px solid var(--color-border);
+    display:    block;
   }
-
+ 
+  .hero__name {
+    font-size: 32px;
+  }
+ 
   .research-grid {
     grid-template-columns: 1fr;
   }
-
+ 
   .contact-grid {
     grid-template-columns: 1fr;
   }
-
+ 
   .footer {
     flex-direction: column;
     gap:            var(--space-xs);
     text-align:     center;
   }
 }
-
+ 
 /* =====================================================
    PAGE HEADER  (publications, people, projects, teaching 공통)
    ===================================================== */
@@ -750,7 +773,7 @@ img {
 .page-header__desc a {
   color: var(--color-accent);
 }
-
+ 
 /* =====================================================
    PEOPLE — PI 섹션 (사진 왼쪽, 설명 오른쪽)
    ===================================================== */
@@ -825,7 +848,7 @@ img {
     height: 140px !important;
   }
 }
-
+ 
 /* =====================================================
    Publication 공통
    ===================================================== */
@@ -834,18 +857,18 @@ img {
   padding:  var(--space-lg);
   position: relative;
 }
-
+ 
 .pub-item__body {
   font-size:     var(--text-base);
   color:         var(--color-text-secondary);
   line-height:   1.85;
   margin-bottom: var(--space-sm);
 }
-
+ 
 .pub-item strong {
   color: var(--color-text-primary);
 }
-
+ 
 .pub-filter {
   display:        inline-block;
   font-size:      10px;
@@ -857,12 +880,12 @@ img {
   margin-right:   6px;
   vertical-align: middle;
 }
-
+ 
 .pub-filter__btn {
   background: var(--color-accent-subtle);
   color:      var(--color-accent);
 }
-
+ 
 /* =====================================================
    Project 공통
    ===================================================== */
@@ -871,18 +894,18 @@ img {
   padding:  var(--space-lg);
   position: relative;
 }
-
+ 
 .project-card__body {
   font-size:     var(--text-base);
   color:         var(--color-text-secondary);
   line-height:   1.85;
   margin-bottom: var(--space-sm);
 }
-
+ 
 .project-card__body strong {
   color: var(--color-text-primary);
 }
-
+ 
 /* =====================================================
    CV PAGE
    ===================================================== */
@@ -1082,7 +1105,7 @@ img {
     grid-template-columns: 1fr;
   }
 }
-
+ 
 /* =====================================================
    GALLERY PAGE
    ===================================================== */

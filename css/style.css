@@ -630,6 +630,22 @@ img {
   font-size: var(--text-xs);
   color:     var(--color-text-muted);
 }
+
+/* 이름+직책 | 링크버튼 가로 배치 */
+.contact-right__top {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     flex-start;
+  gap:             var(--space-md);
+}
+
+/* 링크 버튼 세로 배치 */
+.social-col {
+  display:        flex;
+  flex-direction: column;
+  gap:            6px;
+  flex-shrink:    0;   /* 버튼이 찌그러지지 않도록 */
+}
  
 .social-row {
   display:   flex;

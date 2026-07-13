@@ -1,3 +1,4 @@
+SS
 /* =====================================================
    style.css
    컴포넌트 스타일 정의
@@ -630,15 +631,22 @@ img {
   font-size: var(--text-xs);
   color:     var(--color-text-muted);
 }
-
+ 
 /* 이름+직책 | 링크버튼 가로 배치 */
 .contact-right__top {
-  display:         flex;
-  justify-content: space-between;
-  align-items:     flex-start;
-  gap:             var(--space-md);
+  display:               grid;
+  grid-template-columns: 1fr 1fr;   /* 항상 2열 유지 */
+  gap:                   var(--space-lg);
+  align-items:           start;
 }
-
+ 
+/* 각 열 */
+.contact-right__col {
+  display:        flex;
+  flex-direction: column;
+  gap:            0;
+}
+ 
 /* 링크 버튼 세로 배치 */
 .social-col {
   display:        flex;
@@ -652,7 +660,7 @@ img {
   gap:       8px;
   flex-wrap: wrap;
 }
-
+ 
 .cinfo-block {
   display:        flex;
   flex-direction: column;
